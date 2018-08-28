@@ -4,10 +4,10 @@ angular.module('demo', []).controller('Hello', function($scope, $http) {
  var typ = "noun"; 
  var typ2 = "verb";
  
- var htmlstring =  "https://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=" + typ + " &minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit=55&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
+ var htmlstring =  "http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=noun&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=1&maxLength=-1&limit=5&api_key=1e76922a1e9f2542dc0050e7c5903f8c3f52c1c2f5c4d1f5c"
 
-   var htmlstring2 =  "https://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=" + typ2 + " &minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit=55&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
-  
+  var htmlstring2 =  "http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=noun&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=1&maxLength=-1&limit=5&api_key=1e76922a1e9f2542dc0050e7c5903f8c3f52c1c2f5c4d1f5c"
+
   
  $http.get(htmlstring).
         then(function(response) {
@@ -27,3 +27,7 @@ angular.module('demo', []).controller('Hello', function($scope, $http) {
     }
 		
 });
+
+//1e76922a1e9f2542dc0050e7c5903f8c3f52c1c2f5c4d1f5c
+//http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=noun&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=1&maxLength=-1&limit=5&api_key=1e76922a1e9f2542dc0050e7c5903f8c3f52c1c2f5c4d1f5c
+//http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=noun&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=1&maxLength=-1&limit=5&api_key=1e76922a1e9f2542dc0050e7c5903f8c3f52c1c2f5c4d1f5c
